@@ -8,12 +8,12 @@
         </tr>
     </thead>
     </tbody>
-        <% for row in rows: %>
+        % for row in rows: 
             <tr>                
                 <td>{{row[0]}}</td>
                 <td> {{row[1]}}</td>
                 <td>{{row[2]}} USD</td>
             </tr>
-        <% end %>
+        % end
     </tbody>
 </table> 

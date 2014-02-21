@@ -33,8 +33,8 @@ def get_salary():
                  WHERE e.last_name LIKE '{0}%'
                  LIMIT 10 """.format(name)
 
-    rows = MySQLConnect().execute(query)    
+    rows = MySQLConnect(host="11.11.11.4").execute(query)    
     return template("stuff", rows=rows)
 
 
-run(app, host="localhost", port=8000, debug=True, reloader=True)
+run(app, host="11.11.11.3", port=8000) #, debug=True, reloader=True)
